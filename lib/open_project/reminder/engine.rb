@@ -87,7 +87,8 @@ module OpenProject::Reminder
       require_dependency 'reminder_minutes'
       require_dependency 'reminder_participant'
 
-      PermittedParams.permit(:search, :reminders)
+      #PermittedParams.permit(:search, :reminders)
+      PermittedParams.permitted_attributes.merge({:search => :reminders})
     end
   end
 end
