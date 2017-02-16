@@ -75,10 +75,10 @@ module OpenProject::Reminder
       require 'open_project/reminder/hooks'
     end
 
-    initializer 'reminder.register_latest_project_activity' do
-      Project.register_latest_project_activity on: OpenProject::Reminder,
-                                               attribute: :updated_at
-    end
+    #initializer 'reminder.register_latest_project_activity' do
+      #Project.register_latest_project_activity on: OpenProject::Reminder,
+                                               #attribute: :updated_at
+    #end
 
     config.to_prepare do
       # load classes so that all User.before_destroy filters are loaded
